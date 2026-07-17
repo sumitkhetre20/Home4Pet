@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-light: #60A5FA;
+  --color-primary-dark: #1D4ED8;
+  
+  --color-secondary: #7C3AED;
+  --color-secondary-light: #A78BFA;
+  --color-secondary-dark: #5B21B6;
+  
+  --color-accent: #F97316;
+  --color-accent-light: #FDBA74;
+  --color-accent-dark: #C2410C;
+  
+  --color-success: #22C55E;
+  --color-success-light: #86EFAC;
+  --color-success-dark: #15803D;
+  
+  --color-background-light: #F8FAFC;
+  --color-background-dark: #0B0F19;
+  
+  --color-card-light: #FFFFFF;
+  --color-card-dark: #1E293B;
+
+  /* Standard custom slate typography mapping */
+  --color-slate-405: #94a3b8;
+  --color-slate-450: #64748b;
+  --color-slate-550: #475569;
+  --color-slate-655: #334155;
+  --color-slate-750: #1e293b;
+  --color-slate-850: #0f172a;
+  --color-slate-955: #020617;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --animate-float-slow: float 6s ease-in-out infinite;
+  --animate-float-medium: float 4s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Simplified Solid Card and Glass utility components */
+@utility glass-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass-card {
+  background-color: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+@utility glass-nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dark .glass-nav {
+  background-color: #0b0f19;
+  border-color: #1e293b;
+}
+
+@utility gradient-btn {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  color: white;
+  font-weight: 750;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25), 0 8px 20px -5px rgba(124, 58, 237, 0.15);
+}
+
+.gradient-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px -5px rgba(37, 99, 235, 0.3), 0 10px 22px -5px rgba(124, 58, 237, 0.2);
+}
+
+.gradient-btn:active {
+  transform: scale(0.99);
+}
+
+@utility gradient-text {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #2563EB, #7C3AED, #F97316);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F8FAFC;
+  color: #1e293b;
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+.dark body {
+  background-color: #0B0F19;
+  color: #f1f5f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #080c14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Keyboard Focus Accessibility Indicators */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Hide defaults for input autofills */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Heartburst animation custom styles */
+@keyframes heartBurst {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.4); }
+  50% { transform: scale(0.8); }
+  75% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.animate-heart-burst {
+  animation: heartBurst 0.45s ease-in-out;
+}
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-effect 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Masonry grid aspect-ratio controls */
+.pinterest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 24px;
+}
+
+/* Custom swiper styling integration */
+.swiper-pagination-bullet-active {
+  background: #2563EB !important;
+}
+
+/* Hide background floating blobs to keep theme simple */
+.bg-blob-1,
+.bg-blob-2,
+.bg-blob-3 {
+  display: none !important;
+}
+
+/* Flat, solid backgrounds for cards in light and dark mode to guarantee text readability */
+.bg-white {
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+  border-color: #e2e8f0 !important;
+}
+
+.dark .bg-white {
+  background-color: #1e293b !important;
+  backdrop-filter: none !important;
+  border-color: #334155 !important;
+}
+
+/* Dark mode custom slate variables overrides */
+.dark {
+  --color-slate-405: #94a3b8;
+  --color-slate-450: #cbd5e1;
+  --color-slate-550: #e2e8f0;
+  --color-slate-655: #f1f5f9;
+  --color-slate-750: #f8fafc;
+  --color-slate-850: #ffffff;
+  --color-slate-955: #ffffff;
+}
