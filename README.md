@@ -62,27 +62,23 @@ A full-stack pet adoption platform built with **React, Spring Boot, MySQL, JWT A
 ---
 
 <p align="center">
-  <img src=""C:\Users\91784\OneDrive\Pictures\Screenshots\Screenshot 2026-07-17 115144.png"" width="900">
+  <img src="https://github.com/sumitkhetre20/Home4Pet/blob/c7fffe1ed5b22e75ede1933c07cb21cd14040ec4/uploads/screenshots/chatbot.png width"="900">
 </p>
 
 <p align="center">
-  <img src=""C:\Users\91784\OneDrive\Pictures\Screenshots\Screenshot 2026-07-17 115155.png"" width="900">
+  <img src="https://github.com/sumitkhetre20/Home4Pet/blob/c7fffe1ed5b22e75ede1933c07cb21cd14040ec4/uploads/screenshots/homepage.png" width="900">
 </p>
 
 <p align="center">
-  <img src=""C:\Users\91784\OneDrive\Pictures\Screenshots\Screenshot 2026-07-17 115224.png"" width="900">
+  <img src="https://github.com/sumitkhetre20/Home4Pet/blob/c7fffe1ed5b22e75ede1933c07cb21cd14040ec4/uploads/screenshots/listed.png" width="900">
 </p>
 
 <p align="center">
-  <img src=""C:\Users\91784\OneDrive\Pictures\Screenshots\Screenshot 2026-07-17 115835.png"" width="900">
+  <img src="https://github.com/sumitkhetre20/Home4Pet/blob/c7fffe1ed5b22e75ede1933c07cb21cd14040ec4/uploads/screenshots/pets.png" width="900">
 </p>
 
 <p align="center">
-  <img src=""C:\Users\91784\OneDrive\Pictures\Screenshots\Screenshot 2026-07-17 115906.png"" width="900">
-</p>
-
-<p align="center">
-  <img src=""C:\Users\91784\OneDrive\Pictures\Screenshots\Screenshot 2026-07-17 121115.png"" width="900">
+  <img src="https://github.com/sumitkhetre20/Home4Pet/blob/c7fffe1ed5b22e75ede1933c07cb21cd14040ec4/uploads/screenshots/signup_login.png" width="900">
 </p>
 
 
